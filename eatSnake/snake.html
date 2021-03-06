@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1'>
+
+<title>eatSnake</title>
+<head>
+	<link href='index.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<p class="notice">提示：空格键控制开始/ 暂停，方向键控制蛇的移动方向，F5刷新</p>
+<div class="controller">
+	<button id="stopcontinue"data-status="暂停">继续</button>
+	<button id="up">上</button>
+	<button id="restart">重玩</button>
+	<button id="left">左</button>
+	<button id="down">下</button>
+	<button id="right">右</button>
+</div>
+<script>
+	document.body.addEventListener('touchmove', function(e){
+        e.preventDefault();
+    }, { passive: false });  //passive 参数不能省略，用来兼容ios和android
+</script>
+<script type="text/javascript" src="js/snake.js"></script>
+<script type="text/javascript" src="js/clickmapkeyboard.js"></script>
+</body>
+</html>

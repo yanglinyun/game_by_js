@@ -1,0 +1,72 @@
+body{
+    height: 100vh;
+    background: #444;
+}
+body,p,div{
+    padding: 0;
+    margin: 0;
+}
+table,thead,tbody,tr,td{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+table{
+    /*合并表格边框 解决tr和 < tbody*/
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+td{
+    border: 2px solid rgb(27, 56, 30);
+    background: #a1d5ff;
+}
+.snake{
+    background: #3388ee;
+}
+.notsnake{
+    background: #a1d5ff;
+}
+.food{
+    background: #33aa33;
+}
+.snake_head{
+    background: #dd4444;
+}
+.controller{
+    display: none;
+}
+.notice{
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+}
+@media screen and (max-width:540px){
+    .notice{
+        display: none;
+    }
+    .controller{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .controller button{
+        background-color: skyblue;
+        font-weight: 700;
+        font-size: 1.5em;
+        color: #ffffff;
+        border: 1px solid #000;
+        width: 33.3%;
+        height: 50%;
+        outline: 0;
+        transition: all 0.2s ease;
+    }
+    #eatSnake{
+        height: 80vh;
+    }
+}
